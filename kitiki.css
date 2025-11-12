@@ -48,7 +48,7 @@ body {
     transform: translateY(-1px);
 }
 
-/* Главное меню - белый прямоугольник справа */
+/* Страницы */
 .page {
     display: none;
     min-height: 100vh;
@@ -60,9 +60,10 @@ body {
     justify-content: flex-end;
     align-items: center;
     padding-right: 5%;
-    padding-top: 80px; /* Отступ для шапки */
+    padding-top: 80px;
 }
 
+/* Главное меню */
 .menu-container {
     background: white;
     border-radius: 25px;
@@ -70,6 +71,9 @@ body {
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
     width: 400px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .main-title {
@@ -108,7 +112,13 @@ body {
     transform: translateY(-1px);
 }
 
-/* Контейнеры тестов */
+/* Контейнеры контента */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
 .quiz-container, .create-container, .quizzes-container {
     background: white;
     border-radius: 20px;
@@ -124,12 +134,6 @@ body {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     text-align: center;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 1rem;
 }
 
 /* Вопросы и варианты */
@@ -178,7 +182,7 @@ body {
     margin-top: 2rem;
 }
 
-/* Форма создания */
+/* Форма создания теста */
 .form-input {
     width: 100%;
     padding: 1rem;
@@ -314,6 +318,7 @@ body {
     .menu-container {
         width: 100%;
         max-width: 350px;
+        padding: 2rem;
     }
     
     .main-title {
@@ -337,26 +342,10 @@ body {
     
     .quiz-container, .create-container, .quizzes-container {
         margin: 120px auto 2rem;
+        padding: 1.5rem;
     }
-/*изображения*/
-
-.menu-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 40px;
-}
-
-.menu-left {
-    text-align: center;
-}
-
-.menu-image {
-    width: 250px;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
+    
+    .quiz-container h2, .create-container h2, .quizzes-container h2 {
+        font-size: 2rem;
+    }
 }

@@ -39,15 +39,18 @@ const catQuiz = {
     results: {
         Stesha: {
             title: "ТИ СТЕША",
-            description: "Ти - втілення затишку та розслабленості! Ти цінуєш комфорт понад усе і вмієш насолоджуватися кожним моментом спокою. Твоя філософія - життя занадто коротке, щоб поспішати."
+            description: "Ти - втілення затишку та розслабленості! Ти цінуєш комфорт понад усе і вмієш насолоджуватися кожним моментом спокою. Твоя філософія - життя занадто коротке, щоб поспішати.",
+            gif: "https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif"
         },
         Himars: {
             title: "ТИ ХАЙМАРС", 
-            description: "Ти - вічна дитина з великим запасом енергії! Ти перетворюєш рутину на гру і знаходиш радість у дрібницях. З тобою ніколи не нудно, ти заряжаєш оптимізмом всіх навколо."
+            description: "Ти - вічна дитина з великим запасом енергії! Ти перетворюєш рутину на гру і знаходиш радість у дрібницях. З тобою ніколи не нудно, ти заряжаєш оптимізмом всіх навколо.",
+            gif: "https://media.giphy.com/media/CqVNnHdR3Yg36/giphy.gif"
         },
         Baghira: {
             title: "ТИ БАГІРА",
-            description: "Ти - цілеспрямований та активний дослідник! Тобі важливо досягати цілей та підкоряти нові висоти. Ти швидко приймаєш рішення і завжди готовий до пригод."
+            description: "Ти - цілеспрямований та активний дослідник! Тобі важливо досягати цілей та підкоряти нові висоти. Ти швидко приймаєш рішення і завжди готовий до пригод.",
+            gif: "https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif"
         }
     }
 };
@@ -168,6 +171,9 @@ function showResults() {
         quizContent.innerHTML = `
             <div class="results-container">
                 <h3>Результати тесту!</h3>
+                <div class="result-gif">
+                    <img src="https://media.giphy.com/media/3o7aD2vOBqFNLb0Hk4/giphy.gif" alt="Результат" style="max-width: 300px; border-radius: 15px; margin: 1rem 0;">
+                </div>
                 <div class="score">${score}/${totalQuestions}</div>
                 <p>Ви відповіли на ${score} з ${totalQuestions} питань</p>
                 <button class="action-btn" onclick="loadQuiz(currentQuiz)" style="margin-top: 1rem;">
@@ -186,6 +192,9 @@ function showResults() {
         quizContent.innerHTML = `
             <div class="results-container">
                 <h3>Твій результат</h3>
+                <div class="result-gif">
+                    <img src="${result.gif}" alt="${result.title}" style="max-width: 300px; border-radius: 15px; margin: 1rem 0;">
+                </div>
                 <div class="personality-result">
                     <div class="personality-title">${result.title}</div>
                     <div class="personality-description">${result.description}</div>
