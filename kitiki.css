@@ -112,6 +112,10 @@ body {
     transform: translateY(-1px);
 }
 
+.xaymars {
+    max-width: 600px;
+    padding-left: 100px;
+}
 /* Контейнеры контента */
 .container {
     max-width: 800px;
