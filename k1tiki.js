@@ -1,4 +1,3 @@
-// Обновленный тест про котиков с личностным результатом
 const catQuiz = {
     id: 'cat-quiz',
     title: "Тест: Який ти кітік?",
@@ -62,7 +61,7 @@ let questionCount = 0;
 let currentQuiz = null;
 let isCustomQuiz = false;
 
-// Навигация по страницам
+// страницы
 function showPage(pageId) {
     document.querySelectorAll('.page').forEach(page => {
         page.classList.remove('active');
@@ -89,7 +88,7 @@ function showMyQuizzes() {
     loadMyQuizzes();
 }
 
-// Работа с тестом
+// тест котики
 function loadQuiz(quiz) {
     currentQuiz = quiz;
     currentQuestion = 0;
@@ -125,7 +124,7 @@ function displayQuestion() {
     
     quizContent.innerHTML = html;
     
-    // Обновляем кнопки навигации
+  //опять кнопки
     document.getElementById('prev-btn').style.display = currentQuestion === 0 ? 'none' : 'block';
     document.getElementById('next-btn').textContent = 
         currentQuestion === currentQuiz.questions.length - 1 ? 'Завершити' : 'Далі';
@@ -164,7 +163,7 @@ function showResults() {
     const quizContent = document.getElementById('quiz-content');
     
     if (isCustomQuiz) {
-        // Для пользовательских тестов - простой подсчет
+        // для созданных тестов
         const score = userAnswers.filter(answer => answer !== null).length;
         const totalQuestions = currentQuiz.questions.length;
         
@@ -182,7 +181,7 @@ function showResults() {
             </div>
         `;
     } else {
-        // Для теста про котиков - личностный результат
+        // Для теста про котов
         const personality = calculatePersonality();
         const result = currentQuiz.results[personality.type];
         
@@ -331,10 +330,9 @@ function saveQuiz() {
         createdAt: new Date().toLocaleDateString('uk-UA')
     };
     
-    // Сохраняем тест в localStorage
     saveQuizToStorage(newQuiz);
     
-    // Очищаем форму
+
     document.getElementById('quiz-title-input').value = '';
     document.getElementById('questions-container').innerHTML = '';
     questionCount = 0;
@@ -342,7 +340,7 @@ function saveQuiz() {
     showMyQuizzes();
 }
 
-// Сохранение в localStorage
+
 function saveQuizToStorage(quiz) {
     const quizzes = getQuizzesFromStorage();
     quizzes.push(quiz);
@@ -395,8 +393,8 @@ function deleteQuiz(quizId) {
     loadMyQuizzes();
 }
 
-// Инициализация
+
 document.addEventListener('DOMContentLoaded', function() {
     showMainMenu();
-    addQuestion(); // Добавляем первое поле для вопроса при загрузке
+    addQuestion(); 
 });

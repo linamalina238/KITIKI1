@@ -13,7 +13,7 @@ body {
     color: #333;
 }
 
-/* Навигация в шапке */
+
 .header-nav {
     display: flex;
     gap: 1rem;
@@ -48,7 +48,7 @@ body {
     transform: translateY(-1px);
 }
 
-/* Страницы */
+
 .page {
     display: none;
     min-height: 100vh;
@@ -63,7 +63,7 @@ body {
     padding-top: 80px;
 }
 
-/* Главное меню */
+
 .menu-container {
     background: white;
     border-radius: 25px;
@@ -116,7 +116,7 @@ body {
     max-width: 800px;
     padding-left: 100px;
 }
-/* Контейнеры контента */
+
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -140,7 +140,7 @@ body {
     text-align: center;
 }
 
-/* Вопросы и варианты */
+
 .question {
     margin-bottom: 2rem;
     text-align: left;
@@ -186,7 +186,7 @@ body {
     margin-top: 2rem;
 }
 
-/* Форма создания теста */
+
 .form-input {
     width: 100%;
     padding: 1rem;
@@ -243,7 +243,7 @@ body {
     margin-top: 2rem;
 }
 
-/* Список тестов */
+
 .quiz-item {
     background: #fff5fa;
     padding: 1.5rem;
@@ -271,7 +271,7 @@ body {
     gap: 0.5rem;
 }
 
-/* Результаты */
+
 .results-container {
     text-align: center;
     padding: 2rem;
@@ -306,7 +306,7 @@ body {
     text-align: left;
 }
 
-/* Адаптивность */
+
 @media (max-width: 768px) {
     .header-nav {
         justify-content: center;
